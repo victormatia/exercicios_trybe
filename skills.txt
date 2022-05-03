@@ -3,3 +3,6 @@
 - Git
 - GitHub
 - Internet
+- HTML
+
+/conflitos resolvidos/
