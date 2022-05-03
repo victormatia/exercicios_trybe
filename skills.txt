@@ -1,15 +1,8 @@
-- Unix
-- Bash
+
+# Skills aprendidas até o momento
+- Unix Bash
 - Git
 - GitHub
 - Internet
 - HTML
-
-/conflitos resolvidos/- Unix
-- Bash
-- Git
-- GitHub
-- Internet
-- HTML
-
-/conflitos resolvidos/
+- CSS
