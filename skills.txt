@@ -6,3 +6,6 @@
 - Internet
 - HTML
 - CSS
+# Próximas Skills a serem aprendidas
+- JavaScript
+- React
