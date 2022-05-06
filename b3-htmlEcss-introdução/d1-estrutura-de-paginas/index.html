@@ -8,11 +8,20 @@
   <title>Estrutura HTML</title>
   <style>
     body{
-      color: rgb(74, 74, 74);
+      color: rgb(24, 24, 24);
       font-family: 'Courier New', Courier, monospace;
     }
     h1{
-      color: rgb(14, 14, 14);
+      color: rgb(219, 147, 24);
+      font-size: 65px;
+    }
+    /*#list-style{
+      background-color: rgb(200, 200, 200)
+    }   
+    essa parte é o requisito 2 do exeercicio 2, porém ficou redundante devido ao requisito 3. Decidi deixar só pra lembrar o funcionamento. */
+
+    .sections{
+      background-color: rgb(202, 202, 202);
     }
   </style>
 </head>
@@ -22,25 +31,32 @@
 
   <p>Hoje vamos aprender como estruturar páginas web com o HTML</p>
 
+  <hr>
+
   <h2>Criando listas</h2>
 
   <p><strong>Crie uma lista com as <!--Exercício 2. Crie um link interno-->
     <a href="#eu">pessoas que você já fez amizade na Trybe</a></strong>
   </p>
-  <ul>
+  <ul class="sections">
     <li>Ninguém ainda :(<br> <!--Exercício 2. Crie um parágrafo para cada pessoa-->
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita reprehenderit natus illum in dolor molestias quaerat pariatur ut eum eius praesentium maiores officia assumenda, est architecto, animi at dolore tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse numquam cupiditate fugit eaque praesentium quia autem enim cumque magni tempore aperiam, molestiae, porro sed non. Animi explicabo deleniti fugit doloribus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, explicabo? Possimus ab quam explicabo enim, voluptate minima, fuga optio incidunt, ad consequatur quod deserunt saepe tempore? Dolor quas nam veniam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe fugit nesciunt perferendis dignissimos exercitationem officia incidunt cupiditate, excepturi sunt accusantium quis consectetur. Asperiores commodi, libero excepturi tempore itaque debitis minima?</p>
     </li>
   </ul>
 
-  <p><strong>Adicione uma imagem com uma URL externa</strong></p>
+  <hr>
+
+  <p class="sections"><strong>Adicione uma imagem com uma URL externa</strong></p>
   <img src="https://img.freepik.com/vetores-gratis/fundo-gradiente-em-tons-de-verde_23-2148372817.jpg?w=996&t=st=1651785364~exp=1651785964~hmac=936d640dcd5a0e33de61c9321f9bc8ff521b103e1189ee5f1086acedfdf0ec8c" alt="degradê verde" width="300px">
 
+  <hr>
 
-  <p><strong>Adicione uma imagem local</strong></p>
+  <p class="sections"><strong>Adicione uma imagem local</strong></p>
   <img id="eu" src="imagens/20220422_000712.jpg" alt="Foto de Victor Matias" width="300px">
 
-  <p> <!--Exercício 2. Adicione um link externo para o google-->
+  <hr>
+
+  <p class="sections"> <!--Exercício 2. Adicione um link externo para o google-->
     <a href="https://www.google.com/" target="_blank"><strong>Google</strong></a>
   </p>
 </body>
