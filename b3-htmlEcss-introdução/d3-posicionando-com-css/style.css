@@ -1,0 +1,63 @@
+body {
+  background-image: url(/imagens/bgmario.jpg);
+  background-size: cover;
+  background-position: 0 -100px;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  color: rgba(31, 31, 211, 0.906);
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 160px;
+
+}
+
+#quadrinho {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  top: 10px;  
+}
+
+.super-mario {
+  width: 200px;
+  position: relative;
+  top: 40px;
+  left: -50px;
+
+}
+
+.goomba {
+  width: 100px;
+  position: relative;
+  left: -200px;
+  top: 170px;
+  
+}
+
+.baloon {
+  max-width: 250px;
+  position: relative;
+  left: 10px;
+  bottom: 300px;
+}
+
+.speach {
+  font-size: 18px;
+  position: relative;
+  left: 2px;
+  bottom: 200px;
+  z-index: 5;
+  
+}
+
+.bowser {
+  width: 300px;
+  position: relative;
+  top: 120px;
+  left: 100px;
+ 
+}
