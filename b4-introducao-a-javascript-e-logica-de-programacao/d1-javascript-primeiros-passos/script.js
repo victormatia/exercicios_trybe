@@ -78,67 +78,126 @@
 
 //--------------------------
 
-// 6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
-// Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
-// Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case).
-// Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
-// Exemplo: bishop (bispo) -> diagonals (diagonais)
+// // 6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// // Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+// // Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case).
+// // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
+// // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
-// Adicione a peça aqui ↓↓↓
+// // Adicione a peça aqui ↓↓↓
 
-let peca ="Galinha";
+// let peca ="Galinha";
 
-// Obs.: não utilize acentuações.
-//------------------ 
-
-
-//----- Não altere nada abaixo dessa linha ------
-
-let evitadorDeErro = peca.toLowerCase() // variavel.toLowerCase converte o valor de uma string para minúsculo
-
-let movimentos = ['em todas as direcoes um casa por rodada', 'em diagonal uma casa por rodada', ' para esquerda', ' para a direita', ' para frente', ' para tras', 'em L uma vez por rodada', 'em todas as direcoes quantas casas quiser por rodada', 'para frente um casa por rodada']
+// // Obs.: não utilize acentuações.
+// //------------------ 
 
 
-if (evitadorDeErro === "rei") {
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === 'em todas as direcoes um casa por rodada') {
-            console.log("Sua peça se move " + movimentos[i]);
-        } 
-    } 
-} else if (evitadorDeErro === "rainha") {
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === 'em todas as direcoes quantas casas quiser por rodada') {
-            console.log("Sua peça se move " + movimentos[i]);
-        } 
-    } 
-} else if (evitadorDeErro === "bispo") {
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === 'em diagonal uma casa por rodada') {
-            console.log("Sua peça se move " + movimentos[i]);
-        } 
-    }
-} else if (evitadorDeErro === "torre") {
-    let movimentosDaTorre = [];
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === ' para esquerda' || movimentos[i] === ' para tras' || movimentos[i] === ' para frente' || movimentos[i] === ' para a direita') {
-            movimentosDaTorre.push(movimentos[i]);
-        }
-    }
-    console.log("Sua peça se move" + movimentosDaTorre + ", uma casa por rodada.")
-} else if (evitadorDeErro === "cavalo") {
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === 'em L uma vez por rodada') {
-            console.log("Sua peça se move " + movimentos[i]);
-        } 
-    }
-} else if (evitadorDeErro === "peao") {
-    for (let i = 0; i < movimentos.length; i += 1) {
-        if (movimentos[i] === 'para frente um casa por rodada') {
-            console.log("Sua peça se move " + movimentos[i]);
-        } 
-    }
-} else {
-    console.log("Peça inválida. Tente os valores: Rei, Rainha, Bispo, Torre, Cavalo ou Peao");
-}
+// //----- Não altere nada abaixo dessa linha ------
+
+// let evitadorDeErro = peca.toLowerCase() // variavel.toLowerCase converte o valor de uma string para minúsculo
+
+// let movimentos = ['em todas as direcoes um casa por rodada', 'em diagonal uma casa por rodada', ' para esquerda', ' para a direita', ' para frente', ' para tras', 'em L uma vez por rodada', 'em todas as direcoes quantas casas quiser por rodada', 'para frente um casa por rodada']
+
+
+// if (evitadorDeErro === "rei") {
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === 'em todas as direcoes um casa por rodada') {
+//             console.log("Sua peça se move " + movimentos[i]);
+//         } 
+//     } 
+// } else if (evitadorDeErro === "rainha") {
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === 'em todas as direcoes quantas casas quiser por rodada') {
+//             console.log("Sua peça se move " + movimentos[i]);
+//         } 
+//     } 
+// } else if (evitadorDeErro === "bispo") {
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === 'em diagonal uma casa por rodada') {
+//             console.log("Sua peça se move " + movimentos[i]);
+//         } 
+//     }
+// } else if (evitadorDeErro === "torre") {
+//     let movimentosDaTorre = [];
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === ' para esquerda' || movimentos[i] === ' para tras' || movimentos[i] === ' para frente' || movimentos[i] === ' para a direita') {
+//             movimentosDaTorre.push(movimentos[i]);
+//         }
+//     }
+//     console.log("Sua peça se move" + movimentosDaTorre + ", uma casa por rodada.")
+// } else if (evitadorDeErro === "cavalo") {
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === 'em L uma vez por rodada') {
+//             console.log("Sua peça se move " + movimentos[i]);
+//         } 
+//     }
+// } else if (evitadorDeErro === "peao") {
+//     for (let i = 0; i < movimentos.length; i += 1) {
+//         if (movimentos[i] === 'para frente um casa por rodada') {
+//             console.log("Sua peça se move " + movimentos[i]);
+//         } 
+//     }
+// } else {
+//     console.log("Peça inválida. Tente os valores: Rei, Rainha, Bispo, Torre, Cavalo ou Peao");
+// }
 
 //--------------------------
+
+// // 7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
+// // Porcentagem >= 90 -> A
+// // Porcentagem >= 80 -> B
+// // Porcentagem >= 70 -> C
+// // Porcentagem >= 60 -> D
+// // Porcentagem >= 50 -> E
+// // Porcentagem < 50 -> F
+// // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+
+// var nota = null;
+
+// nota = 80;
+
+// if ((nota >= 0 && nota <= 100) && nota >= 80) {
+//     console.log("Seu grau de aprovação é: " + nota + "%. Parabéns você foi aprovado!! 🚀");
+// } else if ((nota >= 0 && nota <= 100) && nota < 80) {
+//     console.log("Seu grau de aprovação é: " + nota + "%. Infelizmente você não atingiu os requisitos mínimos. 😿");
+// } else {
+//     console.log("Erro! Nota inválida");
+// }
+
+//--------------------------
+
+// // 8.🚀 Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+// // Bonus: use somente um if.
+
+// const n1 = Math.floor(Math.random() * 10) + 1;
+// const n2 = Math.floor(Math.random() * 10) + 1;
+// const n3 = Math.floor(Math.random() * 10) + 1;
+
+// // let number1 = Math.floor(Math.random() * 60) + 1;  //gerador de numero aleatorio
+
+// if (n1 % 2 === 0 || n2 % 2 === 0 || n3 % 2 === 0) {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
+
+//--------------------------
+
+// // 9.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+// //Bonus: use somente um if.
+
+// const n1 = Math.floor(Math.random() * 10) + 1;
+// const n2 = Math.floor(Math.random() * 10) + 1;
+// const n3 = Math.floor(Math.random() * 10) + 1;
+
+
+// if (n1 % 2 >= 1 || n2 % 2 >= 1 || n3 % 2 >= 1) {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
+
+//--------------------------
+
+
+
