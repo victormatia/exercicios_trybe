@@ -245,3 +245,138 @@
 // O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 // Resultado: R$ 2.612,55.
 // Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
+
+// Salario Bruto
+let salarioBruto = 5000;
+
+
+//Impostos e aliquotas
+const aliquotaInss = [0.08, 0.09, 0.11, 570.88]
+const aliquotaIR = [0.075, 0.15, 0.225, 0.275]
+const valorParDedutivel = [142.80, 354.80, 636.13, 869.36]
+
+// let ir =((descontoInss * aliquotaIR) - parDedutivel);
+
+
+//Programa
+
+console.log("----Salário bruto----")
+console.log(salarioBruto)
+
+// Apartir daqui é feito o cálculo de desconto do INSS sobre o salário bruto
+
+if (salarioBruto <= 1556.94) {
+    for (let contador = 0; contador < aliquotaInss.length; contador += 1) {
+        if (aliquotaInss[contador] === 0.08) {
+            var descontoInss = salarioBruto - (salarioBruto * aliquotaInss[contador]);
+            console.log("");
+            console.log("----Salário com desconto do INSS----");
+            console.log("R$" + descontoInss);
+        } 
+    }
+} else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+    for (let contador = 0; contador < aliquotaInss.length; contador += 1) {
+        if (aliquotaInss[contador] === 0.09) {
+            var descontoInss = salarioBruto - (salarioBruto * aliquotaInss[contador]);
+            console.log("");
+            console.log("----Salário com desconto do INSS----");
+            console.log("R$" + descontoInss);
+        } 
+    }
+} else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    for (let contador = 0; contador < aliquotaInss.length; contador += 1) {
+        if (aliquotaInss[contador] === 0.11) {
+            var descontoInss = salarioBruto - (salarioBruto * aliquotaInss[contador]);
+            console.log("");
+            console.log("----Salário com desconto do INSS----");
+            console.log("R$" + descontoInss);
+        } 
+    }
+} else if (salarioBruto >= 5189.82) {
+    for (let contador = 0; contador < aliquotaInss.length; contador += 1) {
+        if (aliquotaInss[contador] === 570.88) {
+            var descontoInss = salarioBruto - aliquotaInss[contador];
+            console.log("");
+            console.log("----Salário com desconto do INSS----");
+            console.log("R$" + descontoInss);
+        } 
+    }
+}
+
+// Apartir daqui o IR é calculado tendo como base o salário bruto - inss
+
+if (descontoInss <= 1903.98) {
+    let descontoIr ="Parabéns seu salário está insento do imposto de renda";
+    console.log("");
+    console.log("----Salário com desconto do IR----");
+    console.log(descontoIr)
+} else if (descontoInss >= 1903.99 && descontoInss <= 2826.65) {
+    //Apartir daqui é feito a checkagem da aliquota para o parâmetro a cima
+    for (let contador2 = 0; contador2 < aliquotaIR.length; contador2 += 1) {
+        if (aliquotaIR[contador2] === 0.075) {
+            //Apartir daqui é feito a checkagem da parcela dedutível para a aliquota a cima
+            for (let contador3 = 0; contador3 < valorParDedutivel.length; contador3 += 1) {
+                if (valorParDedutivel[contador3] === 142.80) {
+                    let parDedutivel = valorParDedutivel[contador3];
+                    var descontoIr = descontoInss - ((descontoInss * aliquotaIR[contador2]) - parDedutivel);
+                    console.log("");
+                    console.log("----Salário com desconto do IR----");
+                    console.log("R$" + descontoIr);
+                }
+            }
+           
+        } 
+    }
+} else if (descontoInss >= 2826.66 && descontoInss <= 3751.05) {
+    for (let contador2 = 0; contador2 < aliquotaIR.length; contador2 += 1) {
+        if (aliquotaIR[contador2] === 0.15) {
+            for (let contador3 = 0; contador3 < valorParDedutivel.length; contador3 += 1) {
+                if (valorParDedutivel[contador3] === 354.80) {
+                    let parDedutivel = valorParDedutivel[contador3];
+                    var descontoIr = descontoInss - ((descontoInss * aliquotaIR[contador2]) - parDedutivel);
+                    console.log("");
+                    console.log("----Salário com desconto do IR----");
+                    console.log("R$" + descontoIr);
+                }
+            }
+           
+        } 
+    }
+} else if (descontoInss >= 3751.06 && descontoInss <= 4664.68) {
+    for (let contador2 = 0; contador2 < aliquotaIR.length; contador2 += 1) {
+        if (aliquotaIR[contador2] === 0.225) {
+            for (let contador3 = 0; contador3 < valorParDedutivel.length; contador3 += 1) {
+                if (valorParDedutivel[contador3] === 636.13) {
+                    let parDedutivel = valorParDedutivel[contador3];
+                    var descontoIr = descontoInss - ((descontoInss * aliquotaIR[contador2]) - parDedutivel);
+                    console.log("");
+                    console.log("----Salário com desconto do IR----");
+                    console.log("R$" + descontoIr);
+                }
+            }
+           
+        } 
+    }
+} else if (descontoInss >= 4664.68) {
+    for (let contador2 = 0; contador2 < aliquotaIR.length; contador2 += 1) {
+        if (aliquotaIR[contador2] === 0.275) {
+            for (let contador3 = 0; contador3 < valorParDedutivel.length; contador3 += 1) {
+                if (valorParDedutivel[contador3] === 869,36) {
+                    let parDedutivel = valorParDedutivel[contador3];
+                    var descontoIr = descontoInss - ((descontoInss * aliquotaIR[contador2]) - parDedutivel);
+                    console.log("");
+                    console.log("----Salário com desconto do IR----");
+                    console.log("R$" + descontoIr);
+                }
+            }
+           
+        } 
+    }
+}
+
+console.log("");
+console.log("----Salário líquido----");
+console.log("R$" + descontoIr);
+
+// salarioLiquido = descontoInss - ((descontoInss * aliquotaIR) - parDedutivel);
+ 
