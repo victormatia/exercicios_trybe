@@ -42,8 +42,18 @@ for (let i = 0; i < upperCaseP.length; i +=1) {
 
 //#06
 
-let prints = document.getElementsByTagName('p');
+// let prints = document.getElementsByTagName('p');
 
-for (let i = 0; i < prints.length; i +=1) {
-    console.log(prints[i].innerText); 
-};
+// for (let i = 0; i < prints.length; i +=1) {
+//     console.log(prints[i].innerText); 
+// };
+
+function printlog(tag) {
+    let prints = document.getElementsByTagName(tag);
+    for (let i = 0; i < prints.length; i +=1) {
+        console.log(prints[i].innerText); 
+    };
+
+}
+
+printlog('p');
