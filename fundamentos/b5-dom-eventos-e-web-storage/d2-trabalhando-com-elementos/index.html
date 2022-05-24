@@ -66,16 +66,16 @@
       let newTag = document.createElement(tag)
       body.appendChild(newTag).innerText = content;
     }
-    
+
     createNewTagInBoddy('h1', 'Exercícios5.2 - JavaScript DOM')
 
     // ----------------------------------------------------------
 
     //#2 -------------------------------------------------------
-    
+
     function createNewTagInBoddy(tag, content) {
       let body = document.querySelector('body');
-      
+
       if (content === undefined) {
         let newTag = document.createElement(tag)
         body.appendChild(newTag);
@@ -85,22 +85,100 @@
       }
 
     }
-    
+
     createNewTagInBoddy('main');
 
     let main = document.querySelector('main');
-    main.className = 'main-content'
+    main.className = 'main-content';
 
     //----------------------------------------------------------
 
     //#3 -------------------------------------------------------
-    
-    // function createNewTagInMain(tag) {
-    //   let main = document.getElementsByClassName('main-content');
-    //   let newTag = createElement('tag')
+
+    // window.onload = function () { // .onload faz com que o conteúdo dessa função só carregue depois que a página esteja totalmente carregada.
+
+    //   let createNewTag = document.createElement('section')
+    //   main.appendChild(createNewTag);
     // }
-    
-    // createNewTagInBoddy('section');
+
+    let createNewTag = document.createElement('section')
+    main.appendChild(createNewTag);
+
+    let sectionsMain = document.querySelector('section');
+     sectionsMain.className = 'center-content';
+
+    //----------------------------------------------------------
+
+    //#4 -------------------------------------------------------
+
+    function createATag(tag, pai) {
+      let wayToFather = document.querySelector(pai);
+      let newTag = document.createElement(tag);
+
+      wayToFather.appendChild(newTag);
+    }
+
+    createATag('p', '.center-content');
+
+    let paragraph = document.querySelector('p');
+    paragraph.innerText = 'As vezes as coisas são bem dificéis mas isso te faz crescer. Então, saiba aproveitar os dias ruins.'
+
+    //----------------------------------------------------------
+
+    //#5 -------------------------------------------------------
+
+    //sectionsMain.className = 'left-content'
+
+    //----------------------------------------------------------
+
+    //#6 -------------------------------------------------------
+
+    //sectionsMain.className = 'right-content'
+
+    //----------------------------------------------------------
+
+    //#7 -------------------------------------------------------
+
+    function createATag(tag, pai) {
+      let wayToFather = document.querySelector(pai);
+      let newTag = document.createElement(tag);
+
+      wayToFather.appendChild(newTag);
+    }
+
+    createATag('img', '.center-content');
+
+    let wayToImage = document.querySelector('img');
+
+    wayToImage.src = 'https://picsum.photos/200';
+    wayToImage.className = 'small-image';
+
+    //----------------------------------------------------------
+
+    //#8 -------------------------------------------------------
+    // let arrNumb = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis' ,'sete', 'oito', 'nove', 'dez']
+    // function createList(typeList, father, content) {
+    //   let wayToFather = document.querySelector(father);
+    //   let createList = document.createElement(typeList);
+    //   wayToFather.appendChild(createList);
+      
+    //   let wayToUl = document.querySelector(typeList);
+
+    //   function creatLI(content) {
+    //     for (let i = 0; i < content.length; i += 1) {
+    //       let createListItems = document.createElement('li');
+    //       wayToUl.appendChild(creatListItems);
+          
+    //       wayToli = document.querySelectorAll('li')[i];
+
+    //       wayToli.innerText = content[i];
+          
+    //     }
+    //   }
+
+    // }
+
+    // createList('ul', '.center-content', arrNumb);
 
     //----------------------------------------------------------
   </script>
