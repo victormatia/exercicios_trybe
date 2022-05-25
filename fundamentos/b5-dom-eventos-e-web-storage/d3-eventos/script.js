@@ -35,7 +35,7 @@ function createDaysOfTheWeek() {
             createLi.innerText = days;
             createLi.classList.add('day')
             createLi.classList.add('holiday')
-        } else if (days === 4 || days === 11 || days === 18 || days === 25) {
+        } else if (days === 4 || days === 11 || days === 18 || days === 25) { //obs.: o dia 25 não esta recebendo a classe friday.
             createLi.innerText = days;
             createLi.classList.add('day');
             createLi.classList.add('friday')
@@ -85,11 +85,56 @@ function changeColorHolidays(event) {  // o parâmetro dessa função é o event
             day.style.color = 'white';
         }
     }
-    
-
-   
 }
 
 wayToButton.addEventListener('click', changeColorHolidays) // não precisa usar () para chamar a função
 
 //---------------------------------------------------------------
+
+//#4 ---------------------------------------------------------
+
+function createAButton2 (string) {
+    const fatherOfButton = document.querySelector('.buttons-container'); // lembre-se que querySelector retorna apens um elemento.
+
+    const createAElement = document.createElement('button');
+
+    createAElement.innerText = string;
+    createAElement.classList.add('btn-friday')
+
+    fatherOfButton.appendChild(createAElement);
+}
+
+createAButton2('Sexta-feira');
+
+//---------------------------------------------------------------
+
+//#5 ----------------------------------------------------------------
+
+const wayToButton2 = document.querySelector('.btn-friday');
+
+function sextou(event) {
+    const wayToFriday = document.querySelectorAll('.friday');
+    var days = [4, 11, 18, 25];
+
+    for (let i = 0; i < wayToFriday.length; i += 1) {
+        wayToFriday[i].innerText = 'SEXTOU!!!';
+
+        //a função está funcionando perfeitamente mas precisa fazer o processo contrário quando acionada novamente. 
+        
+        // if (wayToFriday[i].innerText === 'SEXTOU!!!') {
+        //     for (let secI = 0; secI < days.length; secI += 1) {
+        //         wayToFriday[i].innerText = days[i];
+        //     }
+        // } else if (wayToFriday[i].innerText === 4 || wayToFriday[i].innerText === 11 || wayToFriday[i].innerText === 18 || wayToFriday[i].innerText === 25){
+        //     wayToFriday[i].innerText = 'SEXTOU!!!';
+        // }
+    }
+
+    
+    console.log('click')
+}
+
+wayToButton2.addEventListener('click', sextou);
+
+
+
