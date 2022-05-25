@@ -51,3 +51,21 @@ function createDaysOfTheWeek() {
   createDaysOfTheMonth()
 
 //---------------------------------------------------------------
+
+//#2 ---------------------------------------------------------
+
+function createAButton (string) {
+    const fatherOfButton = document.querySelector('.buttons-container'); // lembre-se que querySelector retorna apens um elemento.
+
+    const createAElement = document.createElement('button');
+
+    createAElement.innerText = string;
+    createAElement.classList.add('bnt-holiday')
+
+    fatherOfButton.appendChild(createAElement);
+}
+
+createAButton('Feriado');
+
+//---------------------------------------------------------------
+
