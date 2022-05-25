@@ -69,3 +69,27 @@ createAButton('Feriado');
 
 //---------------------------------------------------------------
 
+//#3 ---------------------------------------------------------
+
+const wayToButton = document.querySelector('.bnt-holiday');
+
+function changeColorHolidays(event) {  // o parâmetro dessa função é o evento disparado pela função addEventListener na linha 93.
+    const wayToHolidays = document.querySelectorAll('.holiday');
+
+    for (let day of wayToHolidays) {
+        if (day.style.background === 'green') {
+            day.style.background = '#eee'
+            day.style.color = '#777'
+        } else {
+            day.style.background = 'green';
+            day.style.color = 'white';
+        }
+    }
+    
+
+   
+}
+
+wayToButton.addEventListener('click', changeColorHolidays) // não precisa usar () para chamar a função
+
+//---------------------------------------------------------------
