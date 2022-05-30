@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: auto;
+}
+
+header {
+    font-family: 'Cormorant Garamond', serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 121, 121);
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+#art1, #art2, #art3, #art4 {
+    text-align: justify;
+    margin: 20px;
+    width: 40%;
+}
