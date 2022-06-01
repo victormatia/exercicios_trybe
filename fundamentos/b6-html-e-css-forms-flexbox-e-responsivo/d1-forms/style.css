@@ -22,7 +22,7 @@ span {
 }
 
 form {
-    width: 80%;
+    width: 70%;
     margin:  30px auto auto;
     background-color: rgb(255, 255, 255);
     padding: 20px;
@@ -33,6 +33,10 @@ form {
 
 .space-behind {
     margin: 10px 0px 10px;
+}
+
+.margin-top-input {
+    margin: 30px;
 }
 
 #input-name, #input-email, #textarea, #input-date{
@@ -49,12 +53,41 @@ fieldset legend {
     text-align: left;
 }
 
-#send {
+textarea {
+    resize: none;
+}
+
+.btn {
     padding: 0px 5px;
+    border-radius: 5px;
+}
+
+#btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#send {
+    background-color: rgba(47, 144, 47, 0.903);
+    color: white;
+    
+}
+
+#send:hover {
+    background-color: rgba(63, 187, 63, 0.903);
+}
+
+#reset {
+    background-color: rgba(212, 52, 52, 0.903);
+    color: white;
+}
+
+#reset:hover {
+    background-color: rgba(254, 64, 64, 0.903);
 }
 
 #bar {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
@@ -64,22 +97,7 @@ fieldset legend {
     display: inline-block
 }
 
-#color1 {
-    background-color: rgb(3, 107, 82);
-    width: 24%;
-}
-
-#color2 {
-    background-color: rgb(100, 18, 159);
-    width: 24%;
-}
-
-#color3 {
-    background-color: rgb(198, 190, 45);
-    width: 24%;
-}
-
-#color4 {
-    background-color: rgb(200, 189, 213);
-    width: 24%;
+#gradient {
+    background-image: linear-gradient(to right, rgb(3, 107, 82), rgb(100, 18, 159), rgb(198, 190, 45), rgb(135, 153, 207));
+    width: 100%;
 }

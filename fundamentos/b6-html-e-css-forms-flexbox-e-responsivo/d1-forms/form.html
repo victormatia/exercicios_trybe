@@ -37,7 +37,7 @@
 
         <section class="space-behind">
             <label for="textarea">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-            <textarea id="textarea" name="why-you-deserve" maxlength="500"></textarea>
+            <textarea id="textarea" name="why-you-deserve" maxlength="500" rows="5"></textarea>
         </section>
 
         <section class="space-behind">
@@ -53,13 +53,15 @@
             <label for="input-check2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
         </section>
 
-        <button id="send" type="submit">Enviar</button>
+        <section id="btns">
+            <button id="send" class="btn" type="submit">Enviar</button>
+            <button id="reset" class="btn" type="reset">Limpar</button>
+        </section>
     </form>
     <section id="bar">
-        <div id="color1" class="colors"></div>
-        <div id="color2" class="colors"></div>
-        <div id="color3" class="colors"></div>
-        <div id="color4" class="colors"></div>
+        <div id="gradient" class="colors"></div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
