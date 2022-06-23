@@ -2,5 +2,27 @@
 
 // Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta ("N.A") não altera-se a contagem.
 
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const returnResult = () => {}
+
+const verifyAnswers = (rigthAnswers, studentAnswers) => {
+  let result = 0;
+
+  for (let an in studentAnswers) {
+    if (studentAnswers[an] === rigthAnswers[an]) {
+      result += 1;
+    } else if (studentAnswers[an] === 'N.A') {
+      result = result;
+    } else {
+      result -= 0.5;
+    }
+  }
+
+  return result;
+};
+
+const returnResult = (rigthAnswers, studentAnswers, verifyAnswers) => verifyAnswers(rigthAnswers, studentAnswers);
+
+console.log(returnResult(RIGHT_ANSWERS, STUDENT_ANSWERS, verifyAnswers));
+
